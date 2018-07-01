@@ -9,8 +9,10 @@ class Buses extends Component {
   }
 
   createTable = () => {
-      let table = []
+    let table = []
 
+
+    if (this.props.tableData != null){
       // Outer loop to create parent
       for (let i = 0; i < this.props.tableData.patente.length; i++) {
         let children = []
@@ -22,28 +24,27 @@ class Buses extends Component {
         //Create the parent and add the children
         table.push(<tr>{children}</tr>)
       }
-      return table
     }
+    return table
+  }
 
   render() {
     return (
 
 
-      <div className="Buses-contenido" align="center">
-        <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th>Patente</th>
-              <th>Detencion</th>
-              <th>Hora</th>
-              <th>Recorrido</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.createTable()}
-          </tbody>
-        </table>
-      </div>
+      <table className="table">
+        <thead className="thead-dark">
+          <tr>
+            <th>Patente</th>
+            <th>Detencion</th>
+            <th>Hora</th>
+            <th>Recorrido</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.createTable()}
+        </tbody>
+      </table>
     );
   }
 }

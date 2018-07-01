@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 
 import './Ocupacion.css';
 
@@ -21,12 +21,12 @@ class Ocupacion extends Component {
   render() {
     return (
       <div className="Ocupacion-contenido" align="center">
-        <Bar
-          data={this.state.chartData}
+        <Line
+          data={this.props.chartData}
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Ocupación',
+              text:'Ocupacion del paradero',
               fontSize:25
             },
             legend:{

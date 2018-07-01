@@ -13,6 +13,23 @@
   color: red;
 }
 
+.column {
+    float: left;
+    width: 48%;
+    padding: 40px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.App-graficos {
+  padding: 40px;
+}
+
 .App-contenido {
   background: #f85032;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */

@@ -20,22 +20,20 @@ class Informacion extends Component {
 
   render() {
     return (
-      <div className="Informacion-contenido" align="center">
-        <Bar
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'Información',
-              fontSize:25
-            },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
-          }}
-        />
-      </div>
+      <Bar
+        data={this.props.chartData}
+        options={{
+          title:{
+            display:this.props.displayTitle,
+            text:'Cantidad de solicitud de informacion',
+            fontSize:25
+          },
+          legend:{
+            display:this.props.displayLegend,
+            position:this.props.legendPosition
+          }
+        }}
+      />
     );
   }
 }
